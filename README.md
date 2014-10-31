@@ -34,6 +34,7 @@ Constructs a heatmap layer given an array of `LatLng` points and an object with 
 - **maxZoom** - zoom level where the points reach maximum intensity (as intensity scales with zoom),
   equals `maxZoom` of the map by default
 - **max** - maximum point intensity, `1.0` by default
+- **min** - minimum point intensity, `0.05` by default
 - **radius** - radius of each "point" of the heatmap, `25` by default
 - **blur** - amount of blur, `15` by default
 - **gradient** - color gradient config, e.g. `{0.4: 'blue', 0.65: 'lime', 1: 'red'}`

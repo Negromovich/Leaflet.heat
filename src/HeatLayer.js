@@ -10,7 +10,8 @@ L.HeatLayer = L.Class.extend({
     //     maxZoom: 18,
     //     radius: 25,
     //     blur: 15,
-    //     max: 1.0
+    //     max: 1.0,
+    //     min: 0.05
     // },
 
     initialize: function (latlngs, options) {
@@ -174,7 +175,7 @@ L.HeatLayer = L.Class.extend({
         // console.timeEnd('process');
 
         // console.time('draw ' + data.length);
-        this._heat.data(data).draw();
+        this._heat.data(data).draw(this.options.min || undefined);
         // console.timeEnd('draw ' + data.length);
 
         this._frame = null;
